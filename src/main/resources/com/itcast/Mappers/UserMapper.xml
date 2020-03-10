@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- sql配置文件的约束 -->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itcast.Mappers.UserMapper">
+    <select id="findAll" resultType="User">
+        select * from user ;
+    </select>
+
+    <select id="findUserByName" resultType="User" parameterType="string">
+        select * from user where username like '%${value}%';
+    </select>
+</mapper>
