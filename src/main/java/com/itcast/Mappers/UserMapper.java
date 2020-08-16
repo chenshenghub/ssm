@@ -9,5 +9,6 @@ public interface UserMapper {
     public List<User> findAll();
     //模糊查询
     public List<User> findUserByName(String username);
+    void add();
 
 }
